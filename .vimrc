@@ -1,7 +1,5 @@
 set nocompatible
-" TODO: migrate to Vundle?
-execute pathogen#infect()
-call pathogen#helptags()
+call vundle#begin()
 
 set backspace=indent,eol,start
 
@@ -100,3 +98,21 @@ let g:ycm_language_server += [
   \     'capabilities': { 'textDocument': { 'completion': { 'completionItem': { 'snippetSupport': v:true } } } },
   \   },
   \ ]
+
+set rtp +=~/.vim/bundle/Vundle.vim
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-fugitive'
+Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'fatih/vim-go'
+Plugin 'tpope/vim-surround'
+Plugin 'posva/vim-vue'
+Plugin 'MaxMEllon/vim-jsx-pretty-vue'
+Plugin 'pangloss/vim-javascript'
+Plugin 'prettier/vim-prettier'
+Plugin 'dense-analysis/ale'
+Plugin 'eslint/eslint'
+Plugin 'ycm-core/YouCompleteMe'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'tpope/vim-obsession'
