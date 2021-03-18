@@ -1,0 +1,14 @@
+[user]
+	name = Christopher Riebs
+	email = chris@riebs.io
+[alias]
+	co = checkout
+	s = status
+	cob = checkout -B
+	diffn = diff --name-only
+[init]
+	defaultBranch = master
+[core]
+	excludesfile = /Users/criebs/.gitignore
+[pull]
+	rebase = preserve
