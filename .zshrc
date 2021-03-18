@@ -3,7 +3,9 @@ fpath=(~/.zsh $fpath)
 [[ -a ~/.aliases.private ]] && source ~/.aliases.private
 [[ -a ~/.bashrc.functions ]] && source ~/.bashrc.functions
 
+# also sets zsh's vi-mode!
 export EDITOR='vim'
+export KEYTIMEOUT=1
 
 setopt NO_CASE_GLOB
 setopt CORRECT
@@ -19,11 +21,21 @@ setopt PROMPT_SUBST
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 
 local user_color='green'; [ $UID -eq 0 ] && user_color='red'
+local user_prompt=' %F{$user_color}%#%f '
+local workdir='%K{black}%F{yellow}%4~%f%k'
 local return_status='%K{white}%B%F{red}%(?..%?)%f%b%k'
-local clock='%F{blue}[%D{%H:%M:%S}]%f'
-PROMPT='%K{black}%F{yellow}%4~%f%k %F{$user_color}%#%f '
+local clock="%F{blue}[%D{%H:%M:%S}]%f"
+PROMPT='${workdir}${user_prompt}'
 PROMPT2='%F{red}\ %f'
 RPROMPT='${return_status}$(__git_ps1)${clock}'
+
+function zle-line-init zle-keymap-select {
+    VIM_PROMPT=' %F{white,dim}[!]%f'
+    PROMPT='${workdir}${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/}${user_prompt}'
+    zle reset-prompt
+}
+zle -N zle-line-init
+zle -N zle-keymap-select
 
 # The following lines were added by compinstall
 
