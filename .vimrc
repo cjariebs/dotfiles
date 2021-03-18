@@ -1,5 +1,25 @@
 set nocompatible
+
+set rtp +=~/.vim/bundle/Vundle.vim
+
 call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-fugitive'
+Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'fatih/vim-go'
+Plugin 'tpope/vim-surround'
+Plugin 'posva/vim-vue'
+Plugin 'MaxMEllon/vim-jsx-pretty'
+Plugin 'pangloss/vim-javascript'
+Plugin 'prettier/vim-prettier'
+Plugin 'dense-analysis/ale'
+Plugin 'eslint/eslint'
+Plugin 'ycm-core/YouCompleteMe'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'tpope/vim-obsession'
+
+call vundle#end()
 
 set backspace=indent,eol,start
 
@@ -99,20 +119,3 @@ let g:ycm_language_server += [
   \   },
   \ ]
 
-set rtp +=~/.vim/bundle/Vundle.vim
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'tpope/vim-fugitive'
-Plugin 'ludovicchabant/vim-gutentags'
-Plugin 'fatih/vim-go'
-Plugin 'tpope/vim-surround'
-Plugin 'posva/vim-vue'
-Plugin 'MaxMEllon/vim-jsx-pretty-vue'
-Plugin 'pangloss/vim-javascript'
-Plugin 'prettier/vim-prettier'
-Plugin 'dense-analysis/ale'
-Plugin 'eslint/eslint'
-Plugin 'ycm-core/YouCompleteMe'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'tpope/vim-obsession'
