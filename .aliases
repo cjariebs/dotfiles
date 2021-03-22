@@ -1,6 +1,7 @@
 alias ll='ls -l'
 alias la='ls -la'
 alias vi='vim'
+alias v='vim'
 alias g='git'
 alias gdiff='git diff -w'
 alias zz='exit'

@@ -9,6 +9,10 @@ export KEYTIMEOUT=1
 
 setopt NO_CASE_GLOB
 setopt CORRECT
+setopt nobanghist
+
+export NVM_DIR="$HOME/.nvm"
+[[ -a "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
 
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUPSTREAM="verbose"
