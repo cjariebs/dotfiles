@@ -1,14 +1,14 @@
 [user]
-	name = Christopher Riebs
-	email = criebs@cmdagency.com
+	name = Kallisti
+	email = kallisti@kallisti.io
 [alias]
 	co = checkout
 	s = status
 	cob = checkout -B
 	diffn = diff --name-only
 [init]
-	defaultBranch = master
+	defaultBranch = main
 [core]
-	excludesfile = /Users/criebs/.gitignore
+	excludesfile = /Users/kallisti/.gitignore
 [pull]
-	rebase = preserve
+	rebase = true

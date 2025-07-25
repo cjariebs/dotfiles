@@ -4,3 +4,4 @@ tags
 notes
 spin
 *.private
+.DS_Store

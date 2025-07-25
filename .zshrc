@@ -3,6 +3,20 @@ fpath=(~/.zsh $fpath)
 [[ -a ~/.aliases.private ]] && source ~/.aliases.private
 [[ -a ~/.bashrc.functions ]] && source ~/.bashrc.functions
 
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[[ -a "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH=":$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+
+# android-studio
+export ANDROID_HOME=/Users/kallisti/Library/Android/sdk
+export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
+
 # also sets zsh's vi-mode!
 export EDITOR='vim'
 export KEYTIMEOUT=1
@@ -10,9 +24,6 @@ export KEYTIMEOUT=1
 setopt NO_CASE_GLOB
 setopt CORRECT
 setopt nobanghist
-
-export NVM_DIR="$HOME/.nvm"
-[[ -a "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
 
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUPSTREAM="verbose"
@@ -59,3 +70,12 @@ zstyle :compinstall filename '/Users/criebs/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+export PATH="$HOME/.symfony/bin:/usr/local/sbin:$PATH"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+export CMAKE_PREFIX_PATH="/Users/kallisti/workshop/deskflow/deps/qt/6.7.2/macos:$CMAKE_PREFIX_PATH"
+
+export PATH="$PATH:/Users/kallisti/workshop/deskflow/build/bin"
+export PATH="/usr/local/opt/openjdk@21/bin:$PATH"

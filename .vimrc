@@ -12,12 +12,13 @@ Plugin 'tpope/vim-surround'
 Plugin 'posva/vim-vue'
 Plugin 'MaxMEllon/vim-jsx-pretty'
 Plugin 'pangloss/vim-javascript'
-Plugin 'prettier/vim-prettier'
+Plugin 'adnan007d/vim-prettier'
 Plugin 'dense-analysis/ale'
 Plugin 'eslint/eslint'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-obsession'
+Plugin 'psf/black'
 
 call vundle#end()
 
@@ -68,6 +69,8 @@ filetype plugin indent on
 autocmd BufNewFile,BufRead *.twig set syntax=html
 autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
 "autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
+
+nnoremap <Leader>b :Black<CR>
 
 " enable fzf
 set rtp+=/usr/local/opt/fzf
